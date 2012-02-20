@@ -5,12 +5,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "epoxy-srv", "epoxy-srv\epox
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fleck", "Fleck\src\Fleck\Fleck.csproj", "{8B12D929-AFA9-4307-BEFF-2ED0F1070FEE}"
 EndProject
+Project("{9344bdbb-3e7f-41fc-a0dd-8665d75ee146}") = "epoxy-client", "epoxy-client\epoxy-client.mdproj", "{45711F37-8B9C-4D13-80D9-A0D24C7467CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
+		Default|Any CPU = Default|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45711F37-8B9C-4D13-80D9-A0D24C7467CD}.Debug|x86.ActiveCfg = Default|Any CPU
+		{45711F37-8B9C-4D13-80D9-A0D24C7467CD}.Debug|x86.Build.0 = Default|Any CPU
+		{45711F37-8B9C-4D13-80D9-A0D24C7467CD}.Default|Any CPU.ActiveCfg = Default|Any CPU
+		{45711F37-8B9C-4D13-80D9-A0D24C7467CD}.Default|Any CPU.Build.0 = Default|Any CPU
+		{45711F37-8B9C-4D13-80D9-A0D24C7467CD}.Release|x86.ActiveCfg = Default|Any CPU
+		{45711F37-8B9C-4D13-80D9-A0D24C7467CD}.Release|x86.Build.0 = Default|Any CPU
 		{5DE66A72-41CA-42E8-89A4-6732B5CC01AE}.Debug|x86.ActiveCfg = Debug|x86
 		{5DE66A72-41CA-42E8-89A4-6732B5CC01AE}.Debug|x86.Build.0 = Debug|x86
 		{5DE66A72-41CA-42E8-89A4-6732B5CC01AE}.Release|x86.ActiveCfg = Release|x86

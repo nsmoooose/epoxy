@@ -1,49 +1,43 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>websocket client</title>
-    <script type="text/javascript">
-        var start = function () {
-            var inc = document.getElementById('incomming');
-            var wsImpl = window.WebSocket || window.MozWebSocket;
-            var form = document.getElementById('sendForm');
-            var input = document.getElementById('sendText');
-            
-            inc.innerHTML += "connecting to server ..<br/>";
-
-            // create a new websocket and connect
-            window.ws = new wsImpl('ws://localhost:8181/consoleappsample', 'my-protocol');
-
-            // when data is comming from the server, this metod is called
-            ws.onmessage = function (evt) {
-                inc.innerHTML += evt.data + '<br/>';
-            };
-
-            // when the connection is established, this method is called
-            ws.onopen = function () {
-                inc.innerHTML += '.. connection open<br/>';
-            };
-
-            // when the connection is closed, this method is called
-            ws.onclose = function () {
-                inc.innerHTML += '.. connection closed<br/>';
-            }
-            
-			form.addEventListener('submit', function(e){
-				e.preventDefault();
-				var val = input.value;
-				ws.send(val);
-				input.value = "";
-			});
-            
-        }
-        window.onload = start;
-    </script>
+  <title>websocket client</title>
+  <link href="design.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="scripts/mootools-core-1.4.4-full-nocompat-yc.js" ></script>
+  <script type="text/javascript" src="scripts/menu.js" ></script>
+  <script type="text/javascript" src="scripts/product.js" ></script>
+  <script type="text/javascript" src="scripts/order.js" ></script>
 </head>
 <body>
-	<form id="sendForm">
-		<input id="sendText" placeholder="Text to send" />
-	</form>
-    <pre id="incomming"></pre>
+  <header>
+	Epoxy the worlds bestest bysnis system.
+  </header>
+  <nav id="mainmenu">
+	<h2>Menu</h2>
+  </nav>
+  <div id="content">
+	<h2>Notes</h2>
+	<p>
+	  This is a proof of concept application to show:
+	  <ul>
+		<li>that you don't need a web server</li>
+		<li>the web server framework can be a waste of time.</li>
+		<li>HTML5 changes the way things works with websockets</li>
+	  </ul>
+	  Of course you need a web server at customer installations. But as a developer
+	  you don't need one at all.
+	</p>
+	<p>
+	  With proper css styling and some smart scripting you should be able to
+	  template everything with fever jscript lines than ever done with c++.
+	</p>
+	<p>
+	  Server side code is simply processed by generating json stuff back and
+	  forth.
+	</p>
+  </div>
+  <footer>
+	Copyrajt someone.
+  </footer>
 </body>
 </html>

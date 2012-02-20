@@ -1,0 +1,47 @@
+header {
+	padding: 10px;
+	background: white;
+	border-style: solid;
+	border-color: grey;
+	border-width: 1px;
+}
+
+nav {
+	padding: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 200px;
+	float: left;
+	border-style: solid;
+	border-color: grey;
+	border-width: 1px;
+	background: white;
+}
+
+nav a {
+	display: block;
+}
+
+#content {
+	padding: 5px;
+	margin-top: 10px;
+	margin-left: 220px;
+	background: white;
+	border-style: solid;
+	border-color: grey;
+	border-width: 1px;
+}
+
+footer {
+	margin-top: 10px;
+	padding: 5px;
+	clear: left;
+	border-style: solid;
+	border-color: grey;
+	border-width: 1px;
+	background: white;
+}
+
+body {
+	background: #aaaaaa;
+}
