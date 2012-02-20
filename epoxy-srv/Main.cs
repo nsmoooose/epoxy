@@ -6,15 +6,23 @@ using Fleck;
 
 namespace epoxysrv
 {
-	class Message
+	[Serializable]
+	class Request
 	{
+		public string id;
 		public string cmd;
 		public Dictionary<string, string> parameters;
+	}
+	
+	[Serializable]
+	class Response
+	{
+		public string id;
+		public object result;
 		
-		public Message ()
+		public Response (string id)
 		{
-			this.cmd = "";
-			parameters = new Dictionary<string, string>();
+			this.id = id;
 		}
 	}
 	
@@ -37,8 +45,14 @@ namespace epoxysrv
                     socket.OnMessage = message =>
                         {
 							JavaScriptSerializer serializer = new JavaScriptSerializer();
-							var msg = serializer.Deserialize<Message>(message);					
+							Request msg = serializer.Deserialize<Request>(message);					
                             Console.WriteLine(msg.cmd);
+					
+							if(msg.cmd == "prd_search") {
+								Response r = new Response(msg.id);
+								r.result = Product.SearchProducts(msg.parameters);
+								socket.Send(serializer.Serialize(r));
+							}
                         };
                 });
 
